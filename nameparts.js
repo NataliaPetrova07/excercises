@@ -40,14 +40,4 @@ console.log(firstName, middleName, lastName);*/
 
 // fullName("Potter", "Harry", "James", "Pottypotpot");
 
-let cssString = "rgb(192, 13, 1)";
 
-function cssToRGB(string) {
-  let r = parseInt(string.substring(4, string.indexOf(",")));
-  let g = parseInt(string.substring(string.indexOf(" ") + 1, string.lastIndexOf(",")));
-  let b = parseInt(cssString.substring(string.lastIndexOf(" ") + 1, string.indexOf(")")));
-
-  console.log(r, g, b);
-}
-
-cssToRGB(cssString);
