@@ -14,16 +14,32 @@ let lastName = stringName.substring(stringName.lastIndexOf(" "));
 
 console.log(firstName, middleName, lastName);*/
 
-const fullname = "Peter Bosch Lind";
 
-function getNameParts( stringName ){
-    let firstName = stringName.substring(0, stringName.indexOf(" "));
-    let middleName = stringName.substring(stringName.indexOf(" ") + 1, stringName.lastIndexOf(" "));
-    let lastName = stringName.substring(stringName.lastIndexOf(" ") + 1);
-    if(middleName === " "){
-        middleName = undefined;
-    };
-    console.log({firstName, middleName, lastName });
-};
 
-getNameParts(fullname);
+// const fullname = "Peter Bosch Lind";
+
+// function getNameParts(stringName) {
+//   let firstName = stringName.substring(0, stringName.indexOf(" "));
+//   let middleName = stringName.substring(stringName.indexOf(" ") + 1, stringName.lastIndexOf(" "));
+//   let lastName = stringName.substring(stringName.lastIndexOf(" ") + 1);
+//   if (middleName === " ") {
+//     middleName = undefined;
+//   }
+//   console.log({ firstName, middleName, lastName });
+// }
+
+// getNameParts(fullname);
+
+
+
+function fullName(lastName, firstName, middleName, gibberish) {
+  firstName += " ";
+  if (middleName === undefined) {
+    middleName = "";
+  } else {
+    middleName += " ";
+  }
+  console.log(`${firstName}${middleName}${lastName}`);
+}
+
+fullName("Potter", "Harry", "James", "Pottypotpot");
