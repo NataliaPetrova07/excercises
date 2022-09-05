@@ -1,4 +1,4 @@
-const stringName = "Peter Heronimous Lind";
+// const stringName = "Peter Heronimous Lind";
 
 /*const words = stringName.split(" ");
 
@@ -8,8 +8,22 @@ const lastName = words[2];
 
 console.log(firstName, middleName, lastName);*/
 
-let firstName = stringName.substring(0, stringName.indexOf(" "));
+/*let firstName = stringName.substring(0, stringName.indexOf(" "));
 let middleName = stringName.substring(stringName.indexOf(" "), stringName.lastIndexOf(" "));
 let lastName = stringName.substring(stringName.lastIndexOf(" "));
 
-console.log(firstName, middleName, lastName);
+console.log(firstName, middleName, lastName);*/
+
+const fullname = "Peter Lind";
+
+function getNameParts( stringName ){
+    let firstName = stringName.substring(0, stringName.indexOf(" "));
+    let middleName = stringName.substring(stringName.indexOf(" "), stringName.lastIndexOf(" "));
+    let lastName = stringName.substring(stringName.lastIndexOf(" "));
+    if(middleName === ""){
+        middleName = undefined;
+    };
+    console.log({firstName, middleName, lastName });
+};
+
+getNameParts(fullname);
