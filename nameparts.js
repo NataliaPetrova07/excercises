@@ -41,3 +41,20 @@ console.log(firstName, middleName, lastName);*/
 // fullName("Potter", "Harry", "James", "Pottypotpot");
 
 
+function fullName(lastName, firstName, middleName, gibberish) {
+firstName = capitalize(firstName);
+middleName = capitalize(middleName);
+lastName = capitalize(lastName);
+    if (middleName) {
+    return `${firstName} ${middleName} ${lastName}`
+  } 
+  return `${firstName} ${lastName}`
+}
+
+function capitalize(str) {
+    return str[0].toUpperCase() + str.slice(1).toLowerCase()
+  }
+
+const TheName = fullName("potter", "harry", "james", "pottypotpot");
+
+console.log(TheName)
